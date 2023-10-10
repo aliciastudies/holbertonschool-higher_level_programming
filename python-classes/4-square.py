@@ -15,7 +15,6 @@ class Square:
         __init__(self, size=0): initiliases square with default 0
         area(self): calculates current square area
 
-
     """
     def __init__(self, size=0):
         """
