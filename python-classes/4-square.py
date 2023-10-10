@@ -1,12 +1,20 @@
 #!/usr/bin#!/usr/bin/python3
 """
-Defining a Square
+Defining class Square - private attribute size, getter and setter, public method
 """
 
 
 class Square:
     """
     Creating Squares
+
+    Attributes:
+        __size: (int): Size of square
+
+    Methods:
+        __init__(self, size=0): initiliases square with default 0
+        area(self): calculates current square area
+
 
     """
     def __init__(self, size=0):
