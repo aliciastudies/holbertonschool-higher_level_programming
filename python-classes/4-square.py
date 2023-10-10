@@ -1,4 +1,4 @@
-#!/usr/bin#!/usr/bin/python3
+#!/usr/bin/python3
 """
 Defining class Square - private attribute size, getter and setter, public method
 """
