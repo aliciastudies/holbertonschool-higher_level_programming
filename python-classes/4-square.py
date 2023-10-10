@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Defining class Square - private attribute size, getter and setter, public method
+Defining class Square - private attribute size
+getter and setter, public method
 """
 
 
@@ -19,7 +20,7 @@ class Square:
     def __init__(self, size=0):
         """
         Initialises new Square instance
-        
+
         Args:
             size (int): size of the square
         """
