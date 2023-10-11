@@ -14,7 +14,8 @@ class Square:
         __position (int): Position of square
 
     Methods:
-        __init__(self, size=0, position=(0, 0)): initiliases square with default 0 and position 0, 0
+        __init__(self, size=0, position=(0, 0)):
+        initiliases square with default 0 and position 0, 0
         area(self): calculates current square area
         my_print(self): prints square with the character #
 
@@ -67,7 +68,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     @position.setter
     def position(self, value):
         if type(value) is not tuple:
