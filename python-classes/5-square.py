@@ -68,9 +68,9 @@ class Square:
         """
         Function prints square with the character #
         """
+        if self.__size == 0:
+            print()
         for row in range(self.__size):
-            if self.__size == 0:
-                print()
             for index in range(self.__size):
                 print("#", end="")
             print()
