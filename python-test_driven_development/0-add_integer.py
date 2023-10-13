@@ -2,6 +2,8 @@
 """
 func that adds 2 integers
 """
+
+
 def add_integer(a, b=98):
     """
     Args:
@@ -10,7 +12,7 @@ def add_integer(a, b=98):
 
     Return:
         int: sum of a and b
-    
+
     Raises:
             TypeError: if either a or b are not ints or floats
     """
