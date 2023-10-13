@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
     error_2 = "Each row of the matrix must have the same size"
 
     if not isinstance(matrix, (list)):
-        raise TypeError()
+        raise TypeError(error_1)
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
