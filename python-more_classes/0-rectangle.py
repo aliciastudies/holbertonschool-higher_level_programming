@@ -2,6 +2,8 @@
 """
 Defining a Rectangle
 """
+
+
 class Rectangle:
     """
     An empty class
