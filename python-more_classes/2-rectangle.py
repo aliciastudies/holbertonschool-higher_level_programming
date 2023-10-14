@@ -92,4 +92,4 @@ class Rectangle:
             result = 0
         else:
             result = (self.__height + self.__width) * 2
-            return result 
+        return result 
