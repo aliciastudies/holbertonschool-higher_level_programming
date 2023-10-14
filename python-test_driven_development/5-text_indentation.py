@@ -23,8 +23,8 @@ def text_indentation(text):
     for char in text:
         current = current + char
         if char in punc:
-            print(current)
+            print(current.strip())
             print()
             current = ""
     if current:
-        print(current, end="")
+        print(current.strip())
