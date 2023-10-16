@@ -14,7 +14,6 @@ def inherits_from(obj, a_class):
 
         Return: True if exact match, else False
     """
-    if isinstance(obj, a_class) is True:
-        if type(obj) is not a_class:
-            return True
-        return False
+    if isinstance(obj, a_class) is True and type(obj) is not a_class:
+        return True
+    return False
