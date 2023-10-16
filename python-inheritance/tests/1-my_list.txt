@@ -1,0 +1,57 @@
+The ``MyList`` module
+======================
+
+Using ``MyList``
+-------------------
+
+
+Import ``my_list``:
+
+     >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+    Basic sort:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> print(my_list.print_sorted())
+    [1, 2, 3]
+    None
+
+    Sort negative numbers:
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> print(my_list.print_sorted())
+    [-1, 2, 3]
+    None
+
+    Sort empty list:
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted())
+    []
+    None
+
+    Sort using __str__:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> print(my_list.__str__())
+    [1, 3, 2]
+
+    New list sort:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> print(my_list)
+    [1, 3, 2]
+    >>> print(my_list.print_sorted())
+    [1, 2, 3]
+    None
+    >>> print(my_list)
+    [1, 3, 2]
