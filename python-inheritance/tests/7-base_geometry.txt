@@ -18,12 +18,17 @@ Now use it:
     >>> print(bg.integer_validator("my_int", 12))
     None
 
-    
     If int is str:
     >>> print(bg.integer_validator("name", "John"))
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
+
+    Only one argument passed:
+    >>> print(bg.integer_validator("name"))
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     If args are empty:
     >>> print(bg.integer_validator())
@@ -36,3 +41,31 @@ Now use it:
     Traceback (most recent call last):
     ...
     ValueError: my_int must be greater than 0
+
+    If value is a list:
+    >>> print(bg.integer_validator("name", [3]))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    If value is boolean:
+    >>> print(bg.integer_validator("name", True))
+    None
+
+    If value is a set:
+    >>> print(bg.integer_validator("name", {3, 4}))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    If value is None:
+    >>> print(bg.integer_validator("name", None))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    get area:
+    >>> print(bg.area())
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
