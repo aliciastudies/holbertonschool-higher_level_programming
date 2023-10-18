@@ -1,0 +1,38 @@
+The ``BaseGeometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+
+Import ``base_geometry``:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+    Create instance:
+    >>> bg = BaseGeometry()
+
+    If it works:
+    >>> print(bg.integer_validator("my_int", 12))
+    None
+
+    
+    If int is str:
+    >>> print(bg.integer_validator("name", "John"))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    If args are empty:
+    >>> print(bg.integer_validator())
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    If int is negative:
+    >>> print(bg.integer_validator("my_int", -1))
+    Traceback (most recent call last):
+    ...
+    ValueError: my_int must be greater than 0
