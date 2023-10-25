@@ -20,3 +20,10 @@ class Square(Rectangle):
             y: int
         """
         super().__init__(id=id, width=size, height=size, x=x, y=y)
+
+    def __str__(self):
+        """
+        Return string format
+        """
+        return "[{}] ({}) {}/{} - {}".format(
+            self.__class__.__name__, self.id, self.x, self.y, self.width)
