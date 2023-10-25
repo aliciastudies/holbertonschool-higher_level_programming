@@ -100,7 +100,7 @@ class Rectangle(Base):
             self.__class__.__name__, self.id, self.__x, self.__y, self.__width,
             self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update attribute values
         """
@@ -112,4 +112,26 @@ class Rectangle(Base):
                 self.x = args[3]
                 self.y = args[4]
             except IndexError:
+                pass
+
+        else:
+            try:
+                self.id = kwargs["id"]
+            except KeyError:
+                pass
+            try:
+                self.width = kwargs["width"]
+            except KeyError:
+                pass
+            try:
+                self.height = kwargs["height"]
+            except KeyError:
+                pass
+            try:
+                self.x = kwargs["x"]
+            except KeyError:
+                pass
+            try:
+                self.y = kwargs["y"]
+            except KeyError:
                 pass
