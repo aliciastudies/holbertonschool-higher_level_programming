@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+"""
+Inheriting from Rectangle
+"""
+from models.rectangle import Rectangle
+
+
+class Square(Rectangle):
+    """
+    class Square inherits from Rectangle
+    """
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """
+        Function initialises new Rectangle instance
+
+        Args:
+            size: int
+            x: int
+            y: int
+        """
+        super().__init__(id=id, width=size, height=size, x=x, y=y)
