@@ -47,4 +47,4 @@ class Base:
             else:
                 for obj in list_objs:
                     list_dict.append(obj.to_dictionary())
-                    jsonfile.write(cls.to_json_string(list_dict))
+                jsonfile.write(cls.to_json_string(list_dict))
