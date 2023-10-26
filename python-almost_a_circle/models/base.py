@@ -43,7 +43,7 @@ class Base:
         list_dict = []
         with open(filename, "w") as jsonfile:
             if list_objs is None:
-                pass
+                jsonfile.write("[]")
             else:
                 for obj in list_objs:
                     list_dict.append(obj.to_dictionary())
