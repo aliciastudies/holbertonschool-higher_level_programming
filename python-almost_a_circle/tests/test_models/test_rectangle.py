@@ -42,16 +42,9 @@ class TestRectangle (unittest.TestCase):
         r = Rectangle(1, 2)
         self.assertEqual(r.area(), 2)
 
-    def test_str(self):
-        """
-        Test __str__()
-        """
-        r = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(str(r), "[Rectangle] (5) 3/4 - 1/2")
-
     def test_display_no_x_and_y_offset(self):
         """
-        Tests that the graphical representation prints out correctly with no offest
+        Tests that the graphical representation prints out correctly
         """
         r = Rectangle(2, 2)
         capturedOutput = StringIO()     # Create StringIO object
@@ -59,3 +52,31 @@ class TestRectangle (unittest.TestCase):
         r.display()                     # Call unchanged function.
         sys.stdout = sys.__stdout__     # Reset redirect.
         self.assertEqual(capturedOutput.getvalue(), "##\n##\n")
+
+    def test_str(self):
+        """
+        Test __str__()
+        """
+        r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(str(r), "[Rectangle] (5) 3/4 - 1/2")
+
+    def test_update(self):
+        """
+        Test if attributes update
+        """
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(6)
+        self.assertEqual(r.id, 6)
+
+    def test_to_dictionary(self):
+        """
+        Test return dict representation of a Rect
+        """
+        r = Rectangle(1, 2, 3, 4, 5)
+        r_dict = r.to_dictionary()
+        output = {'width': 1, 'height': 2, 'x': 3, 'y': 4, 'id': 5}
+        self.assertEqual(r.to_dictionary(), output)
+
+
+if __name__ == "__main__":
+    unittest.main()
