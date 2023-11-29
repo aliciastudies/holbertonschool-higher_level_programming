@@ -26,5 +26,5 @@ if __name__ == '__main__':
     new_state = session.query(State).filter_by(name="Louisiana").first()
 
     print(new_state.id)
-    #close session
+    # close session
     session.close()
