@@ -22,9 +22,9 @@ if __name__ == '__main__':
     # add new state object to session and commit to db
     session.add(new_state)
     session.commit
-    # get State object from bd to ensure id is populated
+    # get State object from db to ensure id is populated
     new_state = session.query(State).filter_by(name="Louisiana").first()
 
     print(new_state.id)
-
+    #close session
     session.close()
