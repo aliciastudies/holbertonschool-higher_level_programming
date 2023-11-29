@@ -9,10 +9,10 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    #set up connection to MySQL server
+    # set up connection to MySQL server
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         username, password, database), pool_pre_ping=True)
-    #create a session and db tables if needed
+    # create a session and db tables if needed
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     # create session instance
