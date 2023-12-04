@@ -14,16 +14,18 @@ if __name__ == '__main__':
         username, password, database), pool_pre_ping=True)
     # create a session and db tables if needed
     Base.metadata.create_all(engine)
+    # create configured session class
     Session = sessionmaker(bind=engine)
+    Session.configure(bind=engine)
     # create session instance
     session = Session()
     # create new state object
     new_state = State(name="Louisiana")
     # add new state object to session and commit to db
     session.add(new_state)
-    session.commit
+    session.commit()
     # get State object from db to ensure id is populated
-    new_state = session.query(State).filter_by(name="Louisiana").first()
+    # new_state = session.query(State).filter_by(name="Louisiana").first()
 
     print(new_state.id)
     # close session
